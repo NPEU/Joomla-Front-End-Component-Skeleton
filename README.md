@@ -1,4 +1,4 @@
-Joomla-Front-End-Component-Skeleton
+Joomla Front End Component Skeleton
 ===================================
 
 A starting point for a front-end Joomla component.
