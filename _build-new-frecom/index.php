@@ -21,19 +21,19 @@ include_once('_functions.php');
 
 $new_dir     = dirname(__DIR__) . '/' . $com_lc_name;
 
-copy_dir(__DIR__ . '/_com_skeleton', $new_dir);
+copy_dir(__DIR__ . '/_com_frecom', $new_dir);
 
 perform_renames(
     $new_dir,
-    array('_skeleton', str_replace(' ', '', $lc_name)),
+    array('_frecom', str_replace(' ', '', $lc_name)),
     array(
         '{{NAME}}'        => $name,
         '{{DESCRIPTION}}' => $description,
-        '_skeleton'       => str_replace(' ', '', $lc_name),
-        '_Skeleton'       => $classname,
-        '_com_skeleton'   => $com_lc_name,
-        'COM_SKELETON'    => $com_uc_name,
-        '_SKELETON'       => '_' . str_replace(' ', '', $uc_name)
+        '_frecom'         => str_replace(' ', '', $lc_name),
+        '_Frecom'         => $classname,
+        '_com_frecom'     => $com_lc_name,
+        'COM_FRECOM'      => $com_uc_name,
+        '_FRECOM'         => '_' . str_replace(' ', '', $uc_name)
     )
 );
 ?>

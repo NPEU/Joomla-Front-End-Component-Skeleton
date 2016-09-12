@@ -11,7 +11,7 @@ set /p Ds= Enter new component description:
 
 if [%Ds%]==[] goto checkdesc
 
-php -f _build-new/index.php name=%Nm% description=%Ds%
+php -f _build-new-frecom/index.php name=%Nm% description=%Ds%
 
 pause
 goto :eof

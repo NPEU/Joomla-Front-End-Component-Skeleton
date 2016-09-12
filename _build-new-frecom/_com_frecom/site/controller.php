@@ -6,8 +6,8 @@ defined('_JEXEC') or die;
 jimport('joomla.application.component.controller');
 
 /**
- * _Skeleton Component Controller
+ * _Frecom Component Controller
  */
-class _SkeletonController extends JControllerLegacy
+class _FrecomController extends JControllerLegacy
 {
 }

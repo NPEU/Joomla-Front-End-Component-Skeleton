@@ -6,9 +6,9 @@ defined('_JEXEC') or die;
 jimport('joomla.application.component.view');
 
 /**
- * HTML View class for the _Skeleton Component
+ * HTML View class for the _Frecom Component
  */
-class _SkeletonView_Skeleton extends JViewLegacy
+class _FrecomView_Frecom extends JViewLegacy
 {
 	// Overwriting JView display method
 	function display($tpl = null)

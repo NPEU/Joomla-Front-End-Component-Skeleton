@@ -1,5 +1,5 @@
 <?php
-class com__skeletonInstallerScript
+class com__frecomInstallerScript
 {
 	/**
 	 * Constructor

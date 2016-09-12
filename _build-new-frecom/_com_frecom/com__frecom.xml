@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.2.0" method="upgrade">
 
-	<name>COM_SKELETON</name>
+	<name>COM_FRECOM</name>
 	<!-- The following elements are optional and free of formatting constraints -->
 	<creationDate>September 2015</creationDate>
+    <copyright>(C) Andy Kirk 2016</copyright>
 	<author>Andy Kirk</author>
 	<authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
 	<authorUrl>https://intranet.npeu.ox.ac.uk</authorUrl>
@@ -12,9 +13,9 @@
 	<!--  The version string is recorded in the components table -->
 	<version>0.0.1</version>
 	<!-- The description is optional and defaults to the name -->
-	<description>COM_SKELETON_DESCRIPTION</description>
+	<description>COM_FRECOM_DESCRIPTION</description>
     
-    <scriptfile>com__skeleton.script.php</scriptfile>
+    <scriptfile>com__frecom.script.php</scriptfile>
 
 	<!-- Site Main File Copy Section -->
 	<!-- Note the folder attribute: This attribute describes the folder
@@ -22,7 +23,7 @@
 			in this section are copied from /site/ in the package -->
 	<files folder="site">
 		<filename>index.html</filename>
-		<filename>_skeleton.php</filename>
+		<filename>_frecom.php</filename>
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>language</folder>
@@ -30,7 +31,7 @@
 
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu>COM_SKELETON_MENU</menu>
+		<menu>COM_FRECOM_MENU</menu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
 				to copy FROM in the package to install therefore files copied
