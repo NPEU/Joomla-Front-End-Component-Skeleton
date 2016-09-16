@@ -26,7 +26,7 @@ If you're not using windows you can use the PHP-CLI directly by replacing the pl
 `php -f _build-new/index.php name=%Nm% description=%Ds%`
 
 
-About the `com__skeleton.script.php` file
+About the `com__frecom.script.php` file
 -----------------------------------------
 
 As this is a front-end comnponent, we don't need (or want) a menu item showing up in the 'Components' Admin menu.
