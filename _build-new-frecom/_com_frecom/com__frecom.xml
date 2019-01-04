@@ -2,18 +2,22 @@
 <extension type="component" version="3.2.0" method="upgrade">
 
 	<name>COM_FRECOM</name>
-	<!-- The following elements are optional and free of formatting constraints -->
-	<creationDate>September 2015</creationDate>
-    <copyright>(C) Andy Kirk 2016</copyright>
-	<author>Andy Kirk</author>
-	<authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
-	<authorUrl>https://intranet.npeu.ox.ac.uk</authorUrl>
-	<copyright>Copyright Info</copyright>
-	<license>License Info</license>
-	<!--  The version string is recorded in the components table -->
-	<version>0.0.1</version>
-	<!-- The description is optional and defaults to the name -->
-	<description>COM_FRECOM_DESCRIPTION</description>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>January 2019</creationDate>
+    <copyright>(C) NPEU 2019</copyright>
+    <license>MIT License; see LICENSE.md</license>
+
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>COM_FRECOM_DESCRIPTION</description>
+    
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="com__frecom Update Site">https://raw.githubusercontent.com/NPEU/com__frecom/master/update-manifest.xml</server>
+    </updateservers>
     
     <scriptfile>com__frecom.script.php</scriptfile>
 
