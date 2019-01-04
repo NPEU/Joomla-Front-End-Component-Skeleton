@@ -3,7 +3,7 @@
  * @package     Joomla.Site
  * @subpackage  com__frecom
  *
- * @copyright   Copyright (C) NPEU 2018.
+ * @copyright   Copyright (C) NPEU 2019.
  * @license     MIT License; see LICENSE.md
  */
 
@@ -17,20 +17,20 @@ jimport('joomla.application.component.view');
  */
 class _FrecomView_Frecom extends JViewLegacy
 {
-	// Overwriting JView display method
-	function display($tpl = null)
-	{
-		// Assign data to the view
-		$this->msg = 'Get from API';
+    // Overwriting JView display method
+    function display($tpl = null)
+    {
+        // Assign data to the view
+        $this->msg = 'Get from API';
 
-		// Check for errors.
-		if (count($errors = $this->get('Errors')))
-		{
-			JLog::add(implode('<br />', $errors), JLog::WARNING, 'jerror');
+        // Check for errors.
+        if (count($errors = $this->get('Errors')))
+        {
+            JLog::add(implode('<br />', $errors), JLog::WARNING, 'jerror');
 
-			return false;
-		}
-		// Display the view
-		parent::display($tpl);
-	}
+            return false;
+        }
+        // Display the view
+        parent::display($tpl);
+    }
 }
