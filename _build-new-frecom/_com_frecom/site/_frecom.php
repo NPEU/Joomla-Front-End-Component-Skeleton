@@ -1,5 +1,12 @@
 <?php
-// No direct access to this file
+/**
+ * @package     Joomla.Site
+ * @subpackage  com__frecom
+ *
+ * @copyright   Copyright (C) NPEU 2018.
+ * @license     MIT License; see LICENSE.md
+ */
+
 defined('_JEXEC') or die;
 
 // Import Joomla controller library
