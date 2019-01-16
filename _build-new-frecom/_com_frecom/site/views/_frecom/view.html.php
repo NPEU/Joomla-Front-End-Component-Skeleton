@@ -3,7 +3,7 @@
  * @package     Joomla.Site
  * @subpackage  com__frecom
  *
- * @copyright   Copyright (C) NPEU 2019.
+ * @copyright   Copyright (C) {{OWNER}} {{YEAR}}.
  * @license     MIT License; see LICENSE.md
  */
 
@@ -17,8 +17,14 @@ jimport('joomla.application.component.view');
  */
 class _FrecomView_Frecom extends JViewLegacy
 {
-    // Overwriting JView display method
-    function display($tpl = null)
+    /**
+     * Execute and display a template script.
+     *
+     * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
+     *
+     * @return  mixed  A string if successful, otherwise an Error object.
+     */
+    public function display($tpl = null)
     {
         // Assign data to the view
         $this->msg = 'Get from API';

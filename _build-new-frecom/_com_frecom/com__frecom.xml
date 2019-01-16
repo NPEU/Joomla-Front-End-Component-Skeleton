@@ -5,8 +5,8 @@
     <author>Andy Kirk</author>
     <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
     <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
-    <creationDate>January 2019</creationDate>
-    <copyright>(C) NPEU 2019</copyright>
+    <creationDate>{{MONTH}} {{YEAR}}</creationDate>
+    <copyright>(C) {{OWNER}} {{YEAR}}</copyright>
     <license>MIT License; see LICENSE.md</license>
 
     <!--  The version string is recorded in the components table -->
@@ -16,7 +16,7 @@
     
     <updateservers>
         <!-- Note: No spaces or linebreaks allowed between the server tags -->
-        <server type="extension" name="com__frecom Update Site">https://raw.githubusercontent.com/NPEU/com__frecom/master/update-manifest.xml</server>
+        <server type="extension" name="{{OWNER}}: com__frecom Update Site">https://raw.githubusercontent.com/{{OWNER}}/com__frecom/master/update-manifest.xml</server>
     </updateservers>
     
     <scriptfile>com__frecom.script.php</scriptfile>
@@ -29,6 +29,7 @@
         <filename>index.html</filename>
         <filename>_frecom.php</filename>
         <filename>controller.php</filename>
+        <filename>update-manifest.xml</filename>
         <folder>views</folder>
         <folder>language</folder>
     </files>

@@ -3,54 +3,87 @@
  * @package     Joomla.Site
  * @subpackage  com__frecom
  *
- * @copyright   Copyright (C) NPEU 2019.
+ * @copyright   Copyright (C) {{OWNER}} {{YEAR}}.
  * @license     MIT License; see LICENSE.md
  */
 
+defined('_JEXEC') or die;
+
+/**
+ * Removes component entry in the admin menu, as it's front-end only.
+ */
 class com__frecomInstallerScript
 {
     /**
-     * Constructor
+     * This method is called after a component is installed.
      *
-     * @param   JAdapterInstance  $adapter  The object responsible for running this script
+     * @param  \stdClass $parent - Parent object calling this method.
+     *
+     * @return void
      */
-    /*public function __constructor(JAdapterInstance $adapter)
+    public function install($parent)
     {
-    }*/
+    }
 
     /**
-     * Called before any type of action
+     * This method is called after a component is uninstalled.
      *
-     * @param   string  $route  Which action is happening (install|uninstall|discover_install)
-     * @param   JAdapterInstance  $adapter  The object responsible for running this script
+     * @param  \stdClass $parent - Parent object calling this method.
      *
-     * @return  boolean  True on success
+     * @return void
      */
-    /*public function preflight($route, JAdapterInstance $adapter)
+    public function uninstall($parent)
     {
-
-    }*/
+    }
 
     /**
-     * Called after any type of action
+     * This method is called after a component is updated.
      *
-     * Removes the entry from the admin menu as this is a front-end only
-     * component.
+     * @param  \stdClass $parent - Parent object calling object.
      *
-     * @param   string  $route  Which action is happening (install|uninstall|discover_install)
-     * @param   JAdapterInstance  $adapter  The object responsible for running this script
-     *
-     * @return  boolean  True on success
+     * @return void
      */
-    public function postflight($route, JAdapterInstance $adapter)
+    public function update($parent)
     {
-        if ($route != 'install') {
+    }
+
+    /**
+     * Runs just before any installation action is preformed on the component.
+     * Verifications and pre-requisites should run in this function.
+     *
+     * @param  string    $type   - Type of PreFlight action. Possible values are:
+     *                           - * install
+     *                           - * update
+     *                           - * discover_install
+     * @param  \stdClass $parent - Parent object calling object.
+     *
+     * @return void
+     */
+    public function preflight($type, $parent)
+    {
+    }
+
+    /**
+     * Runs right after any installation action is preformed on the component.
+     *
+     * @param  string    $type   - Type of PostFlight action. Possible values are:
+     *                           - * install
+     *                           - * update
+     *                           - * discover_install
+     * @param  \stdClass $parent - Parent object calling object.
+     *
+     * @return void
+     */
+    public function postflight($type, $parent)
+    {
+        if ($type != 'install') {
             return;
         }
 
-        $manifest = $adapter->getParent()->getManifest();
+
+        $manifest = $parent->getParent()->getManifest();
         $name = (string) $manifest->name;
-        
+
         $db = JFactory::getDbo();
         $query = $db->getQuery(true);
         $query->select('id');
@@ -60,8 +93,8 @@ class com__frecomInstallerScript
         $ids = $db->loadColumn();
 
         $db = JFactory::getDbo();
-        $table = JTable::getInstance('menu');       
-        
+        $table = JTable::getInstance('menu');
+
         if ($error = $db->getErrorMsg())
         {
             return false;
@@ -81,39 +114,4 @@ class com__frecomInstallerScript
         }
         return true;
     }
-
-    /**
-     * Called on installation
-     *
-     * @param   JAdapterInstance  $adapter  The object responsible for running this script
-     *
-     * @return  boolean  True on success
-     */
-    /*public function install(JAdapterInstance $adapter)
-    {
-            echo "<pre>\n"; var_dump('install'); echo "</pre>\n";
-    }*/
-
-    /**
-     * Called on update
-     *
-     * @param   JAdapterInstance  $adapter  The object responsible for running this script
-     *
-     * @return  boolean  True on success
-     */
-    /*public function update(JAdapterInstance $adapter)
-    {
-
-    }*/
-
-    /**
-     * Called on uninstallation
-     *
-     * @param   JAdapterInstance  $adapter  The object responsible for running this script
-     */
-    /*public function uninstall(JAdapterInstance $adapter)
-    {
-
-    }*/
 }
-?>
