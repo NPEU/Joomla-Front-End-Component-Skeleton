@@ -30,6 +30,7 @@ perform_renames(
     array(
         '{{OWNER}}'         => $owner,
         '{{NAME}}'          => $name,
+        '{{DESCRIPTION}}'   => $description,
         '{{NAME-NO-SPACE}}' => str_replace(' ', '', $name),
         '_frecom'           => str_replace(' ', '', $lc_name),
         '_Frecom'           => $classname,
