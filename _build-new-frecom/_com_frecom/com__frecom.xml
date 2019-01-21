@@ -29,7 +29,6 @@
         <filename>index.html</filename>
         <filename>_frecom.php</filename>
         <filename>controller.php</filename>
-        <filename>update-manifest.xml</filename>
         <folder>views</folder>
         <folder>language</folder>
     </files>
