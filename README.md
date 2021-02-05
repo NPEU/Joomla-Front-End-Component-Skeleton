@@ -22,8 +22,8 @@ Windows
 -------
 
 Currently, there's a .bat file to allow you enter the arguments for the build script.
-If you're not using windows you can use the PHP-CLI directly by replacing the placeholders in  this command:
-`php -f _build-new/index.php name=%Nm% description=%Ds%`
+If you're not using windows you can use the PHP-CLI directly by replacing the placeholders in this command:
+`php -f _build-new-frecom/index.php owner=%Ow% name=%Nm% description=%Ds%`
 
 
 About the `com__frecom.script.php` file
