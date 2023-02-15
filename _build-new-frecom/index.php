@@ -26,7 +26,10 @@ copy_dir(__DIR__ . '/_com_frecom', $new_dir);
 
 perform_renames(
     $new_dir,
-    array('_frecom', str_replace(' ', '', $lc_name)),
+    array(
+        '_frecom', str_replace(' ', '', $lc_name),
+        '_Frecom', str_replace(' ', '', $classname)
+    ),
     array(
         '{{OWNER}}'         => $owner,
         '{{NAME}}'          => $name,

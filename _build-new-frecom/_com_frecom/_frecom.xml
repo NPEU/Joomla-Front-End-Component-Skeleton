@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+
+    <name>COM_FRECOM</name>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>{{MONTH}} {{YEAR}}</creationDate>
+    <copyright>(C) {{OWNER}} {{YEAR}}</copyright>
+    <license>MIT License; see LICENSE.md</license>
+
+    <version>1.0.0</version>
+    <description>COM_FRECOM_DESCRIPTION</description>
+
+    <updateservers>
+        <server type="extension" name="{{OWNER}}: com__frecom Update Site">https://raw.githubusercontent.com/{{OWNER}}/com__frecom/main/update-manifest.xml</server>
+    </updateservers>
+
+    <namespace path="src/">NPEU\Component\_Frecom</namespace>
+
+    <files folder="site">
+        <folder>language</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <administration>
+        <files folder="admin">
+            <folder>language</folder>
+            <folder>services</folder>
+        </files>
+    </administration>
+
+</extension>

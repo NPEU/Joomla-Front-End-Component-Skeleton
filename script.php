@@ -9,6 +9,9 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+use Joomla\Database\DatabaseInterface;
+
 /**
  * Removes component entry in the admin menu, as it's front-end only.
  */
@@ -84,7 +87,7 @@ class com__frecomInstallerScript
         $manifest = $parent->getParent()->getManifest();
         $name = (string) $manifest->name;
 
-        $db = JFactory::getDbo();
+        $db = Factory::getContainer()->get(DatabaseInterface::class);
         $query = $db->getQuery(true);
         $query->select('id');
         $query->from('#__menu');
@@ -92,14 +95,10 @@ class com__frecomInstallerScript
         $db->setQuery($query);
         $ids = $db->loadColumn();
 
-        $db = JFactory::getDbo();
-        $table = JTable::getInstance('menu');
 
-        if ($error = $db->getErrorMsg())
-        {
-            return false;
-        }
-        elseif (!empty($ids))
+        $table = \Joomla\CMS\Factory::getApplication()->bootComponent('com_menus')->getMVCFactory()->createTable('menu', 'Administrator');
+
+        if (!empty($ids))
         {
             // Iterate the items to delete each one.
             foreach ($ids as $menu_id)

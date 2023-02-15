@@ -53,8 +53,15 @@ function perform_renames($source = '', $file_rename = array(), $content_rename =
                 $source_file = $source . '/' . $file;
                 echo 'Performing renames for: ' . $source_file . "\n";
                 if (strpos($file, $file_rename[0]) !== false) {
-                    
+
                     $new_name = str_replace($file_rename[0], $file_rename[1], $source_file);
+                    rename($source_file, $new_name);
+                    $num++;
+                    $source_file = $new_name;
+                }
+                if (strpos($file, $file_rename[2]) !== false) {
+
+                    $new_name = str_replace($file_rename[2], $file_rename[3], $source_file);
                     rename($source_file, $new_name);
                     $num++;
                     $source_file = $new_name;
@@ -74,7 +81,7 @@ function perform_renames($source = '', $file_rename = array(), $content_rename =
                 } elseif (is_dir($source_file)) {
                     rename($source_file, str_replace($file_rename[0], $file_rename[1], $source_file));
                     $num += perform_renames($source_file, $file_rename, $content_rename);
-                    
+
                 }*/
             }
         }
