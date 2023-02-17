@@ -17,7 +17,6 @@ use Joomla\CMS\Factory;
 
 /**
  * _Frecom Component Controller
- * @since  0.0.2
  */
 class DisplayController extends BaseController {
 

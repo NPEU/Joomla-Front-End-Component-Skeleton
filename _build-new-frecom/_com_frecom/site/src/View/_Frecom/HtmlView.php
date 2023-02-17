@@ -21,6 +21,9 @@ use Joomla\CMS\Log\Log;
 #use Joomla\CMS\Plugin\PluginHelper;
 #use Joomla\Event\Event;
 
+/**
+ * _Frecom Component HTML View
+ */
 class HtmlView extends BaseHtmlView {
 
 
