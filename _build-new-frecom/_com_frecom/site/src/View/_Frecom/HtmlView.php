@@ -35,12 +35,11 @@ class HtmlView extends BaseHtmlView {
         // Check for errors.
         $errors = $this->get('Errors', false);
 
-		if (!empty($errors))
-        {
-			Log::add(implode('<br />', $errors), Log::WARNING, 'jerror');
+        if (!empty($errors)) {
+            Log::add(implode('<br />', $errors), Log::WARNING, 'jerror');
 
-			return false;
-		}
+            return false;
+        }
 
         // Call the parent display to display the layout file
         parent::display($template);
