@@ -12,11 +12,11 @@
     <version>1.0.0</version>
     <description>COM_FRECOM_DESCRIPTION</description>
 
+    <namespace path="src/">NPEU\Component\_Frecom</namespace>
+
     <updateservers>
         <server type="extension" name="{{OWNER}}: com__frecom Update Site">https://raw.githubusercontent.com/{{OWNER}}/com__frecom/main/update-manifest.xml</server>
     </updateservers>
-
-    <namespace path="src/">NPEU\Component\_Frecom</namespace>
 
     <files folder="site">
         <folder>language</folder>
