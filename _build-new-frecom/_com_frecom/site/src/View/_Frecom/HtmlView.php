@@ -12,14 +12,14 @@ namespace {{OWNER}}\Component\_Frecom\Site\View\_Frecom;
 defined('_JEXEC') or die;
 
 #use Joomla\CMS\Factory;
-use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
-use Joomla\CMS\Log\Log;
-#use Joomla\CMS\Uri\Uri;
 #use Joomla\CMS\Helper\TagsHelper;
 #use Joomla\CMS\Language\Text;
-#use Joomla\CMS\Router\Route;
 #use Joomla\CMS\Plugin\PluginHelper;
+#use Joomla\CMS\Router\Route;
+#use Joomla\CMS\Uri\Uri;
 #use Joomla\Event\Event;
+use Joomla\CMS\Log\Log;
+use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
 
 /**
  * _Frecom Component HTML View
