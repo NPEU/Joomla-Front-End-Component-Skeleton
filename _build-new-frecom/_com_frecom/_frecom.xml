@@ -9,7 +9,7 @@
     <copyright>(C) {{OWNER}} {{YEAR}}</copyright>
     <license>MIT License; see LICENSE.md</license>
 
-    <version>1.0.0</version>
+    <version>4.0.0</version>
     <description>COM_FRECOM_DESCRIPTION</description>
 
     <namespace path="src/">NPEU\Component\_Frecom</namespace>
