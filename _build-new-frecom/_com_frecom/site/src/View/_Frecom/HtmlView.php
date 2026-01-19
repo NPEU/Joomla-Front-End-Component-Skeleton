@@ -9,7 +9,7 @@
 
 namespace {{OWNER}}\Component\_Frecom\Site\View\_Frecom;
 
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 #use Joomla\CMS\Factory;
 #use Joomla\CMS\Helper\TagsHelper;
@@ -20,6 +20,7 @@ defined('_JEXEC') or die;
 #use Joomla\Event\Event;
 use Joomla\CMS\Log\Log;
 use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
+
 
 /**
  * _Frecom Component HTML View

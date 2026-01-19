@@ -16,6 +16,6 @@
 #use Joomla\CMS\Session\Session;
 #use Joomla\Component\Fields\Administrator\Helper\FieldsHelper;
 
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 ?>
 <h1><?php echo $this->msg; ?></h1>
